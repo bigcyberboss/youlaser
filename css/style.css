@@ -2060,8 +2060,6 @@ img, video, iframe {
 /* ---------- RESPONSIVE: PRICING & REVIEWS ---------- */
 @media (min-width: 768px) {
   .pricing__other {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: start;
     max-width: 900px;
     margin: 0 auto 2rem;
   }
