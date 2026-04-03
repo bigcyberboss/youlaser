@@ -1796,6 +1796,30 @@ img, video, iframe {
   content: '/ ';
 }
 
+.pricing__card-subtitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.pricing__card-subdesc {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.pricing__card-row span small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-weight: 400;
+  margin-top: 0.15rem;
+}
+
 .pricing__cta {
   text-align: center;
 }
