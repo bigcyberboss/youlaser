@@ -1796,6 +1796,17 @@ img, video, iframe {
   content: '/ ';
 }
 
+.pricing__card-divider {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin-top: 2rem;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid var(--border);
+}
+
 .pricing__card-subtitle {
   font-family: var(--font-display);
   font-size: 1.1rem;
@@ -2050,6 +2061,7 @@ img, video, iframe {
 @media (min-width: 768px) {
   .pricing__other {
     grid-template-columns: repeat(2, 1fr);
+    align-items: start;
     max-width: 900px;
     margin: 0 auto 2rem;
   }
