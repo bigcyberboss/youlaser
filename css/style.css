@@ -1761,6 +1761,13 @@ img, video, iframe {
   background: var(--secondary);
 }
 
+.pricing__card-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text-secondary, #666);
+  margin-bottom: 1rem;
+}
+
 .pricing__card-note {
   display: block;
   font-size: 0.75rem;
