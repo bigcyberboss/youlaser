@@ -269,4 +269,24 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScrollIndicator, { passive: true });
   }
 
+  // ---------- Yandex.Metrika Goals ----------
+  const YM_COUNTER = 108695984;
+
+  function reachGoal(name) {
+    if (typeof ym === 'function') ym(YM_COUNTER, 'reachGoal', name);
+  }
+
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    const href = link.getAttribute('href') || '';
+
+    if (href.includes('dikidi.net')) reachGoal('booking_click');
+    else if (href.includes('wa.me') || href.includes('whatsapp.com')) reachGoal('whatsapp_click');
+    else if (href.includes('t.me') || href.includes('telegram.')) reachGoal('telegram_click');
+    else if (href.startsWith('tel:')) reachGoal('phone_click');
+    else if (href.includes('max.ru')) reachGoal('max_click');
+  });
+
 });
