@@ -4,18 +4,20 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Yandex.Metrika counter -->
+        <!-- Yandex.Metrika: счётчик подключается только после «Принять» в cookie-баннере (js/consent.js) -->
         <script type="text/javascript">
-            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-            (window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108695984', 'ym');
+            window.loadMetrika = function () {
+                if (window.__metrikaLoaded) return;
+                window.__metrikaLoaded = true;
+                (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+                m[i].l=1*new Date();
+                for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+                k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+                (window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108695984', 'ym');
 
-            ym(108695984, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+                ym(108695984, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+            };
         </script>
-        <noscript><div><img src="https://mc.yandex.ru/watch/108695984" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-        <!-- /Yandex.Metrika counter -->
 
         <title>YOU LAZER -Студия лазерной косметологии в Москве</title>
         <meta
@@ -1975,6 +1977,11 @@
                 <div class="footer__bottom">
                     <p>&copy; 2025 YOU LAZER. ИП Макарова А.Д. ИНН: 330801618484</p>
                     <p>Мясницкая 24/7, стр. 3, Москва</p>
+                    <p class="footer__legal">
+                        <a href="privacy.html">Политика конфиденциальности</a>
+                        · <a href="privacy.html#cookies">Cookie</a>
+                        · <a href="privacy.html#booking">Условия записи</a>
+                    </p>
                     <p class="footer__credit">crafted by <a href="https://t.me/bigcyberboss" target="_blank" rel="noopener">@bigcyberboss</a></p>
                 </div>
             </div>
@@ -2018,6 +2025,35 @@
             </div>
         </div>
 
+        <!-- ============ COOKIE CONSENT ============ -->
+        <div
+            class="cookie-banner"
+            id="cookieBanner"
+            role="dialog"
+            aria-live="polite"
+            aria-label="Использование cookie"
+            hidden
+        >
+            <p class="cookie-banner__text">
+                Мы используем cookie и Яндекс.Метрику, чтобы понимать, какие
+                разделы сайта полезны. Счётчик включится только после вашего
+                согласия. <a href="privacy.html#cookies">Подробнее</a>
+            </p>
+            <div class="cookie-banner__actions">
+                <button
+                    type="button"
+                    class="cookie-banner__btn cookie-banner__btn--accept"
+                    id="cookieAccept"
+                >
+                    Принять
+                </button>
+                <button type="button" class="cookie-banner__btn" id="cookieReject">
+                    Отклонить
+                </button>
+            </div>
+        </div>
+
+        <script src="js/consent.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>

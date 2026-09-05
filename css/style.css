@@ -2461,3 +2461,157 @@ img, video, iframe {
 body.is-locked {
   overflow: hidden;
 }
+
+/* ============================================
+   COOKIE CONSENT
+   ============================================ */
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000;
+  max-width: 440px;
+  margin-left: auto;
+  padding: 18px 20px;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(17, 17, 17, 0.18);
+  font-family: var(--font-body);
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner__text {
+  margin: 0 0 14px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--text-light);
+}
+
+.cookie-banner__text a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cookie-banner__btn {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.cookie-banner__btn:hover {
+  border-color: var(--primary);
+}
+
+.cookie-banner__btn--accept {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.cookie-banner__btn--accept:hover {
+  opacity: 0.9;
+}
+
+/* ============================================
+   FOOTER LEGAL LINKS + LEGAL PAGE (privacy.html)
+   ============================================ */
+.footer__legal {
+  margin-top: 0.25rem;
+}
+
+.footer__legal a {
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer__legal a:hover {
+  color: var(--secondary);
+}
+
+.legal {
+  padding: 4rem 0 5rem;
+}
+
+.legal__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal__back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.legal__back:hover {
+  color: var(--primary);
+}
+
+.legal h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+
+.legal__meta {
+  margin: 0 0 3rem;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.legal section {
+  margin-bottom: 2.5rem;
+  scroll-margin-top: 2rem;
+}
+
+.legal h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+.legal p,
+.legal li {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text);
+  margin: 0 0 0.75rem;
+}
+
+.legal ul {
+  padding-left: 1.2rem;
+  margin: 0 0 0.75rem;
+}
+
+.legal a {
+  color: var(--primary);
+  text-decoration: underline;
+}
